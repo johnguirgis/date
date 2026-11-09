@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nunu × Jojo Birthday-Anniversary Extravaganza</title>
+<style>
+body { margin: 0; min-height: 100svh; display: grid; place-items: center; background: #0e0a13; }
+body #little-date { box-sizing: border-box; width: min(100%, 470px); padding: clamp(16px, 5vw, 40px); }
+
+#little-date { padding: 18px 8px; }
+#little-date article { box-sizing: border-box; max-width: 390px; margin: auto; padding: 29px 18px 24px; border: 1px solid #523748; border-radius: 24px; background: radial-gradient(ellipse at 50% 43%, #2b1b30 0%, #17101c 66%, #100c16 100%); color: #f9e7de; text-align: center; box-shadow: 0 10px 28px #11091455; font-family: Georgia, serif; }
+#little-date h1 { margin: 14px 0 10px; font: 400 clamp(25px, 7.4vw, 34px)/1.06 Georgia, serif; letter-spacing: -.055em; }
+#little-date h1 em { color: #efadbb; overflow-wrap: anywhere; }
+#little-date p { margin: 0; font: 400 15px/1.48 Georgia, serif; }
+#little-date svg { width: 100%; max-width: 310px; display: block; margin: 1px auto 6px; }
+#little-date .eyebrow, #little-date .details { font: 600 10px/1.4 system-ui, sans-serif; letter-spacing: .16em; color: #e6b9a4; }
+#little-date span { margin: 0 4px; }
+#little-date .clue { font-size: 19px; font-style: italic; }
+#little-date .details { display: inline-block; margin: 13px 0 9px; padding: 6px 10px; border-top: 1px solid #523748; border-bottom: 1px solid #523748; }
+#little-date .signoff { font-size: 13px; }
+#couple-model { position: relative; max-width: 310px; margin: 0 auto; }
+#couple-model model-viewer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+#couple-model.model-ready model-viewer { visibility: visible; }
+#couple-model.model-ready .illustrated-couple { visibility: hidden; }
+#little-date .rotate-hint {
+  display: none;
+  margin: 0 0 10px;
+  color: #d9aeb8;
+  font: 400 11px/1.4 system-ui, sans-serif;
+  letter-spacing: .04em;
+}
+#couple-model.model-ready + .rotate-hint { display: block; }
+</style>
+</head>
+<body>
+<div id="little-date">
+  <article aria-label="Birthday and eight-month date invitation">
+    <div class="eyebrow">quickly, quicklyyyyyy</div>
+    <h1>Nunu × Jojo<br><em>Birthday-Anniversary Extravaganza</em></h1>
+    <p>a special day for my special Nunu</p>
+    <div id="couple-model">
+    <svg viewBox="0 0 320 205" role="img" aria-label="Two placeholder figurines on a stage, with theatre masks and a faint CN Tower silhouette behind them">
+      <defs>
+        <radialGradient id="date-halo"><stop stop-color="#653b59"/><stop offset="1" stop-color="#16101c" stop-opacity="0"/></radialGradient>
+        <linearGradient id="date-rose"><stop stop-color="#e6a6ab"/><stop offset="1" stop-color="#bc7481"/></linearGradient>
+        <linearGradient id="date-plum"><stop stop-color="#8e6578"/><stop offset="1" stop-color="#55394d"/></linearGradient>
+      </defs>
+      <ellipse cx="160" cy="104" rx="146" ry="105" fill="url(#date-halo)"/>
+      <g aria-hidden="true" fill="#b795c3" opacity=".22">
+        <path d="M223 9h2l1 38h2l1 16 11 4v7l-5 5h-7l2 66 7 15h-25l7-15 2-66h-7l-5-5v-7l11-4 1-16h2z"/>
+        <path d="M214 71h21" stroke="#ead6f0" stroke-width="1.5" opacity=".65"/>
+      </g>
+      <g fill="#dda6a1" font-family="Georgia" text-anchor="middle">
+        <text x="64" y="110" font-size="23">✧</text><text x="257" y="103" font-size="19">✧</text><text x="228" y="126" font-size="14">+</text><text x="164" y="30" font-size="19">♡</text>
+      </g>
+      <g aria-hidden="true" transform="translate(62 70)" fill="none" stroke="#e8ba9d" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" opacity=".72">
+        <g transform="rotate(14)">
+          <path d="M0 0q8 3 16 0v7q0 7-8 10Q0 14 0 7z" fill="#241926"/>
+          <path d="M4 6h1m6 0h1m-7 4q3 4 6 0"/>
+        </g>
+        <g transform="translate(-9 5) rotate(-18)">
+          <path d="M0 0q8 3 16 0v7q0 7-8 10Q0 14 0 7z" fill="#241926"/>
+          <path d="M4 6h1m6 0h1m-7 6q3-4 6 0"/>
+        </g>
+      </g>
+      <g class="illustrated-couple">
+      <ellipse cx="160" cy="182" rx="94" ry="13" fill="#7e475c" opacity=".11"/>
+      <path d="M77 166h166v10c0 24-166 24-166 0z" fill="#d89ca1"/>
+      <ellipse cx="160" cy="166" rx="83" ry="18" fill="#f3c7c6"/>
+      <ellipse cx="159" cy="165" rx="57" ry="9" fill="#a56574" opacity=".18"/>
+      <g transform="rotate(-8 133 155)">
+        <path d="M116 134v25m18-25v25" stroke="#543848" stroke-width="11" stroke-linecap="round"/>
+        <rect x="104" y="92" width="43" height="53" rx="17" fill="url(#date-plum)"/>
+        <circle cx="125" cy="73" r="25" fill="#dca182"/>
+        <path d="M101 75c-8-25 22-39 41-23 6 5 8 12 7 16-11 0-19-3-24-10-6 7-14 10-24 11z" fill="#523440"/>
+        <path d="M125 80q5 5 10 0" stroke="#864953" fill="none" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="119" cy="73" r="1.5" fill="#523440"/><circle cx="136" cy="72" r="1.5" fill="#523440"/>
+      </g>
+      <g transform="rotate(8 184 153)">
+        <path d="M169 83c-7 15-12 24-4 33 14 8 39 7 48-3 4-11-6-22-7-39z" fill="#603e4c"/>
+        <path d="M178 138v22m17-22v22" stroke="#bc806d" stroke-width="8" stroke-linecap="round"/>
+        <path d="M172 101q14-10 28 0l12 45q-26 10-51 0z" fill="url(#date-rose)"/>
+        <circle cx="186" cy="81" r="23" fill="#e8b091"/>
+        <path d="M162 85c-9-26 19-38 37-25 7 5 10 15 10 23-13-6-20-12-23-18-6 10-15 15-24 20z" fill="#603e4c"/>
+        <path d="M175 88q5 5 10 0" stroke="#864953" fill="none" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="175" cy="81" r="1.5" fill="#523440"/><circle cx="190" cy="81" r="1.5" fill="#523440"/>
+      </g>
+      <path d="M141 112q4 13 17 18m16-15q-6 10-16 15" fill="none" stroke="#dca182" stroke-width="8" stroke-linecap="round"/>
+      </g>
+    </svg>
+    <model-viewer
+      src="couple.glb"
+      alt="3D clay figurines of Nunu and Jojo holding hands on a rose-colored base"
+      aria-describedby="rotate-hint"
+      camera-controls disable-zoom disable-pan touch-action="pan-y"
+      interaction-prompt="none" camera-orbit="0deg 80deg 110%" field-of-view="31deg">
+    </model-viewer>
+    </div>
+    <p class="rotate-hint" id="rotate-hint"><span aria-hidden="true">↻</span> drag</p>
+    <p class="clue">Wear your dress pleaseeee (we may need to do a bit of walking)</p>
+    <div class="details"><time datetime="2026-11-22T14:00">Sunday, Nov 22 <span>·</span> 2 PM</time></div>
+    <p class="signoff">Happy birthday my precious, can't wait to see you</p>
+  </article>
+</div>
+<script>
+const stage = document.getElementById('couple-model');
+const model = stage.querySelector('model-viewer');
+const illustration = stage.querySelector('svg');
+model.addEventListener('load', () => {
+  stage.classList.add('model-ready');
+  illustration.setAttribute('aria-hidden', 'true');
+});
+model.addEventListener('error', () => {
+  stage.classList.remove('model-ready');
+  illustration.removeAttribute('aria-hidden');
+});
+</script>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
+</body>
+</html>
