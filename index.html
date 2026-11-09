@@ -30,13 +30,12 @@ body #little-date { box-sizing: border-box; width: min(100%, 470px); padding: cl
 #couple-model.model-ready model-viewer { visibility: visible; }
 #couple-model.model-ready .illustrated-couple { visibility: hidden; }
 #little-date .rotate-hint {
-  display: none;
   margin: 0 0 10px;
   color: #d9aeb8;
   font: 400 11px/1.4 system-ui, sans-serif;
   letter-spacing: .04em;
 }
-#couple-model.model-ready + .rotate-hint { display: block; }
+#rotate-hint [hidden] { display: none; }
 </style>
 </head>
 <body>
@@ -103,25 +102,35 @@ body #little-date { box-sizing: border-box; width: min(100%, 470px); padding: cl
       interaction-prompt="none" camera-orbit="0deg 80deg 110%" field-of-view="31deg">
     </model-viewer>
     </div>
-    <p class="rotate-hint" id="rotate-hint"><span aria-hidden="true">↻</span> drag</p>
+    <p class="rotate-hint" id="rotate-hint" role="status"><span id="rotate-arrow" aria-hidden="true" hidden>↻</span> <span id="rotate-label">Loading 3D model…</span></p>
     <p class="clue">Wear your dress pleaseeee (we may need to do a bit of walking)</p>
     <div class="details"><time datetime="2026-11-22T14:00">Sunday, Nov 22 <span>·</span> 2 PM</time></div>
     <p class="signoff">Happy birthday my precious, can't wait to see you</p>
   </article>
 </div>
+<script id="model-viewer-script" type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
 <script>
 const stage = document.getElementById('couple-model');
 const model = stage.querySelector('model-viewer');
 const illustration = stage.querySelector('svg');
+const rotateArrow = document.getElementById('rotate-arrow');
+const rotateLabel = document.getElementById('rotate-label');
+
+function showModelUnavailable() {
+  stage.classList.remove('model-ready');
+  illustration.removeAttribute('aria-hidden');
+  rotateArrow.hidden = true;
+  rotateLabel.textContent = '3D model unavailable';
+}
+
+document.getElementById('model-viewer-script').addEventListener('error', showModelUnavailable);
 model.addEventListener('load', () => {
   stage.classList.add('model-ready');
   illustration.setAttribute('aria-hidden', 'true');
+  rotateArrow.hidden = false;
+  rotateLabel.textContent = 'drag';
 });
-model.addEventListener('error', () => {
-  stage.classList.remove('model-ready');
-  illustration.removeAttribute('aria-hidden');
-});
+model.addEventListener('error', showModelUnavailable);
 </script>
-<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.4.0/model-viewer.min.js"></script>
 </body>
 </html>
