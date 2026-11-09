@@ -1,0 +1,46 @@
+#nudle {
+  box-sizing: border-box;
+  width: min(100%, 440px);
+  padding: 26px clamp(14px, 4vw, 26px);
+  border: 1px solid #523748;
+  border-radius: 24px;
+  background: radial-gradient(ellipse at top, #352039, #17101c 72%);
+  color: #f9e7de;
+  text-align: center;
+  font: 14px/1.4 system-ui, sans-serif;
+}
+#nudle h1 { margin: 4px 0 6px; font: 400 54px/1 Georgia, serif; color: #efadbb; }
+.nudle-kicker { margin: 0; color: #e6b9a4; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; }
+#nudle-board { display: grid; gap: 5px; justify-content: center; margin: 17px 0; }
+.nudle-row { display: flex; gap: 5px; }
+.nudle-tile {
+  display: grid;
+  place-items: center;
+  width: clamp(34px, 10vw, 43px);
+  aspect-ratio: 1;
+  border: 1px solid #715468;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+#nudle-status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); margin: 0; }
+#nudle-keys { display: grid; gap: 5px; }
+.nudle-key-row { display: flex; gap: 3px; justify-content: center; }
+#nudle button {
+  border: 0;
+  border-radius: 5px;
+  background: #51384d;
+  color: #fff4ee;
+  font: 700 12px system-ui, sans-serif;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.nudle-key-row button { flex: 1; min-width: 0; max-width: 36px; height: 43px; padding: 0; }
+.nudle-key-row button[data-key="Enter"], .nudle-key-row button[data-key="Backspace"] { flex: 1.55; max-width: 55px; }
+#nudle #nudle-prize { background: #efadbb; color: #291b2b; }
+#nudle-retry, #nudle-prize { margin-top: 10px; padding: 12px 18px; }
+#nudle [data-score="0"] { background: #39343e; border-color: #39343e; }
+#nudle [data-score="1"] { background: #856020; border-color: #856020; }
+#nudle [data-score="2"] { background: #3b7156; border-color: #3b7156; }
+
+#nudle-keys[hidden] { display: none; }

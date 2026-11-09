@@ -37,12 +37,23 @@ body #little-date { box-sizing: border-box; width: min(100%, 470px); padding: cl
 }
 #rotate-hint [hidden] { display: none; }
 </style>
+<link rel="stylesheet" href="nudle.css">
 </head>
 <body>
-<div id="little-date">
+<main id="nudle" aria-labelledby="nudle-title">
+  <p class="nudle-kicker">A little puzzle for Nunu</p>
+  <h1 id="nudle-title">NUdle</h1>
+  <p style="margin: 0">Get it? Cuz NUnu????</p>
+  <div id="nudle-board" role="group" aria-label="Guess board"></div>
+  <p id="nudle-status" role="status"></p>
+  <div id="nudle-keys" role="group" aria-label="On-screen keyboard"></div>
+  <button id="nudle-prize" type="button" hidden>Proceed to prize</button>
+  <button id="nudle-retry" type="button" hidden>Try again</button>
+</main>
+<div id="little-date" hidden>
   <article aria-label="Birthday and eight-month date invitation">
     <div class="eyebrow">quickly, quicklyyyyyy</div>
-    <h1>Nunu × Jojo<br><em>Birthday-Anniversary Extravaganza</em></h1>
+    <h1 tabindex="-1">Nunu × Jojo<br><em>Birthday-Anniversary Extravaganza</em></h1>
     <p>a special day for my special Nunu</p>
     <div id="couple-model">
     <svg viewBox="0 0 320 205" role="img" aria-label="Two placeholder figurines on a stage, with theatre masks and a faint CN Tower silhouette behind them">
@@ -95,7 +106,7 @@ body #little-date { box-sizing: border-box; width: min(100%, 470px); padding: cl
       </g>
     </svg>
     <model-viewer
-      src="couple.glb"
+      data-src="couple.glb"
       alt="3D clay figurines of Nunu and Jojo holding hands on a rose-colored base"
       aria-describedby="rotate-hint"
       camera-controls disable-zoom disable-pan touch-action="pan-y"
@@ -132,5 +143,6 @@ model.addEventListener('load', () => {
 });
 model.addEventListener('error', showModelUnavailable);
 </script>
+<script src="nudle.js"></script>
 </body>
 </html>
